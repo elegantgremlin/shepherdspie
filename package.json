@@ -8,7 +8,7 @@
     "backend": "node app.js",
     "frontend": "npm run start --prefix frontend",
     "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "start": "node server.js",
+    "start": "node app.js",
     "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
   },
   "engines": {
