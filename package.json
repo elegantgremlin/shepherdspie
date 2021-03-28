@@ -1,0 +1,19 @@
+{
+  "name": "shepherds-pie-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend": "node backend/app.js",
+    "frontend": "npm run start --prefix frontend",
+    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  }
+}

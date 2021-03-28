@@ -1,0 +1,18 @@
+.content {
+  width: 700px;
+  margin: 50px auto auto auto;
+}
+.flexbox-row {
+  display: flex;
+  flex-direction: row;
+}
+.loginForm {
+  border: solid 1px black;
+  padding: 20px;
+  margin: 5px;
+}
+.registerForm {
+  border: solid 1px black;
+  padding: 20px;
+  margin: 5px;
+}
