@@ -24,7 +24,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use('/users', userRouter);
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
 });
 
 app.listen(PORT, () => {
