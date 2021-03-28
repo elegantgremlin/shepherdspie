@@ -1,19 +1,34 @@
 {
-  "name": "shepherds-pie-app",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "backend": "node backend/app.js",
+    "backend": "node app.js",
     "frontend": "npm run start --prefix frontend",
-    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "engines": {
+    "node": "12.18.3"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.1"
+  },
   "devDependencies": {
-    "concurrently": "^6.0.0"
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
   }
 }
